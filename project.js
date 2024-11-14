@@ -5,7 +5,7 @@ let secondCard=null;
 let canClick = true;
 let score = 0;
 
-allCards.forEach((card) => {
+allCards.forEach(function(card) {
     card.addEventListener("click",handleCardClicked);
 });
 
@@ -50,7 +50,7 @@ function handleCardClicked(){
 // Game over
 function handleGameOver(){
   setTimeout(function(){
-    let retVal = confirm("Congrtualtions! You Win!\ Wanna Play Again?")
+    let retVal = confirm("Congrtualtions! You Win! Wanna Play Again?")
     if (retVal=== true){
       location.reload();
     }
